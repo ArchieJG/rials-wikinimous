@@ -1,0 +1,19 @@
+<div class="row">
+  <h1>Articles</h1>
+  <%= link_to "Post Article", "/articles/new", class: "btn btn-primary" %>
+</div>
+
+<% @articles.each do |article| %>
+  <%= "=" * 100 %>
+  <h3>
+    <%= article.title %>
+  </h3>
+
+  <p>
+    <%= article.content.truncate_words(10) %>
+  </p>
+  <br>
+  <%= link_to "More details", article_path(article.id), class: "btn btn-warning" %>
+  <br>
+<% end %>
+<%= "=" * 100 %>
