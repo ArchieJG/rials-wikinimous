@@ -1,11 +1,18 @@
 <%= form_for @article do |f| %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <div class="row">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
 
-  <%= f.label :content %>
-  <%= f.text_area :content %>
+  <div class="row">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
 
-  <%= f.submit %>
+  <div class="row">
+    <%= f.submit %>
+  </div>
 
+  <%= link_to "Cancel", articles_path, class: "btn btn-info" %>
 <% end %>

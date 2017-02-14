@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <ul class="nav nav-pills" style="background-color: #eee;">
+      <li role="presentation"><%= link_to "Home", "/articles", class: "btn btn-primary btn-sm" %></li>
+      <li role="presentation" style="float: right;"><%= link_to "Post Article", "/articles/new", class: "btn btn-primary btn-sm" %></li>
+    </ul>
     <div class="container text-center">
       <%= yield %>
     </div>
